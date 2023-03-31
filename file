@@ -1,0 +1,42 @@
+#Nessa- Created maze structure (using if statements, adding user interaction), added healing fountain and implemented use of coins (created player inventory using lists)
+
+
+print("Hello, welcome to the game of fun things")
+
+print(f"Player Location: ({x}, {y})")
+print(f"Health: {health}")
+print(f"Inventory: {inventory}")
+print("How much would you like to move along each axis?")
+while True:
+    change_x = int(input("x axis: "))
+    proposed_x = x + change_x
+    if proposed_x <= 3:  # invalid, ignore
+        print("INVALID MOVE. There is a wall blocking you at x=1.")
+    elif proposed_x >= 10:
+        print("INVALID MOVE. There is a wall blocking you at x=1.")
+    else:  #valid, make move
+        x += change_x
+
+    change_y = int(input("y axis: "))
+    proposed_y = y + change_y
+    if proposed_x <= 0:  #invalid, ignore
+        print("INVALID Move. There is a wall blocking you at y=0")
+    else:  #valid, make move
+        y += change_y
+
+        print(f"Player Location: ({x}, {y})")
+
+    if x == 6 and y == 8:
+        print("You pass by the bubblegum machine of healing! Would you like to use it?")
+        print("[1] Heal (+5 health, -2 coins)")
+    if coins <= 2:
+        print("Not enough coins to use the machine")
+        break
+    else:
+        coins = coins - 2
+        print("[2] Leave")
+        choice = int(input("Choice: "))
+    if choice == 1:
+        print("Healing +5 health, -2 coins")
+        health = health + 5
+   
