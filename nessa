@@ -1,12 +1,16 @@
-#Nessa- Created maze structure (using if statements, adding user interaction), added healing fountain and implemented use of coins (created player inventory using lists)
+#Vanessa- Created maze structure (using if statements, adding user interaction), added healing fountain and implemented use of coins (created player inventory using lists)
 
 
 print("Hello, welcome to the game of fun things")
 
 print(f"Player Location: ({x}, {y})")
+
 print(f"Health: {health}")
+
 print(f"Inventory: {inventory}")
+
 print("How much would you like to move along each axis?")
+
 while True:
     change_x = int(input("x axis: "))
     proposed_x = x + change_x
